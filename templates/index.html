@@ -1,14 +1,70 @@
-<html>
-    <head>
-        <title>Welcome!</title>
-        <link rel="stylesheet" href="../static/css/style.css">
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-        <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" placeholder="Enter your nickname"/>
-            <input type="submit" value="Submit"/>
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <!-- Custom CSS -->
+  <link href="static/css/style.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="intro-header">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="intro-message">
+            <h1>Calculus vs. Statistics</h1>
+            <h2>What class should you take?</h2>
+            <h3>
+              Based on your courses and interests we will suggest a class to take.
+            </h3>
+            <hr class="intro-divider">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </div>
+
+  <div class="content-section-a">
+
+    <form method = "post" action = "/results">
+      <label for="current">Enter your name:</label>
+      <input type="text" name="name" placeholder="Name"/>
+      <label for="current">Choose your current class:</label>
+      <select name="current" id="current">
+        <option value = "" disabled selected>Current Class</option>
+        <option value="Algebra 2">Algebra 2</option>
+        <option value="Pre-Calculus">Pre-Calculus</option>
+      </select>
+      <br><br>
+
+      <label for="major">What are you interested in:
+      <br>
+        <input type="radio" id="STEM" name="major" value="Science, Technology, Engineering, or Math">
+        <label for="STEM">Science, Technology, Engineering, or Math</label><br>
+        <input type="radio" id="humanities" name="major" value="Social Studies and the Humanities">
+        <label for="humanities">Social Studies and the Humanities</label><br>
+        <input type="radio" id="natural" name="major" value="Natural Sciences">
+        <label for="natural">Natural Sciences (medicine, dentistry, etc...) </label><br>
+        <input type="radio" id="business" name="major" value="Business">
+        <label for="business">Business</label><br>
+      
+      <input type="submit" value="Submit"/>
+      </label>
+    </form>
+  </div>
+  <!-- /.content-section-a -->
+
+  
+</body>
+
 </html>
