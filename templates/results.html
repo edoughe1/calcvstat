@@ -31,8 +31,9 @@
 
   <div class = "content-section-a">
     <h1>You should take</h1>
-    <h2>{{recommend}}</h2>
-    <p>You're currently taking {{user_current}} and interested in {{user_major}}, so we recommend {{recommend}} </p>
+    <h2>{{recommend['name']}}</h2>
+    <p>You're currently taking {{user_current}} and interested in {{user_major}}, so we recommend {{recommend['name']}} </p>
+    <img src="{{recommend['src']}}">
   </div>
 
 <a href = '/'>
